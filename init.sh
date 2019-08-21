@@ -5,12 +5,13 @@ cd /etc/yum.repos.d/
 mkdir ./bak
 mv ./* ./bak
 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.re
+yum -y install wget
+wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 yum clean all
 yum makecache fast
 yum -y update
 # 安装常用工具和开发环境
-yum -y install net-tools telnet vim git lrzsz python-pip wget
+yum -y install net-tools telnet vim git lrzsz python-pip
 yum -y groupinstall 'development tools'
 # 修改pip源
 cd /root/
