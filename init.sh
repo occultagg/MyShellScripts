@@ -12,7 +12,7 @@ yum makecache fast
 yum -y update
 # 安装常用工具和开发环境
 yum -y install net-tools telnet vim git lrzsz python-pip
-yum -y groupinstall 'development tools'
+yum -y groupinstall 'development tools' 'server platform development'
 # 修改pip源
 cd /root/
 mkdir ./.pip
