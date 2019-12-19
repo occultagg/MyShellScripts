@@ -61,3 +61,4 @@ cat > ~/.vim/template/py.tlp << EOF
 # conding=utf-8
 #
 EOF
+systemctl enable NetworkManager
