@@ -62,3 +62,11 @@ cat > ~/.vim/template/py.tlp << EOF
 #
 EOF
 systemctl enable NetworkManager
+#时间同步阿里云时间服务器
+yum -y install chrony
+sed -i 's/0.centos.pool.ntp.org/ntp1.aliyun.com/' /etc/chrony.conf
+sed -i 's/1.centos.pool.ntp.org/ntp2.aliyun.com/' /etc/chrony.conf
+sed -i 's/2.centos.pool.ntp.org/ntp3.aliyun.com/' /etc/chrony.conf
+sed -i 's/3.centos.pool.ntp.org/ntp4.aliyun.com/' /etc/chrony.conf
+systemctl start chronyd
+systemctl enable chronyd
