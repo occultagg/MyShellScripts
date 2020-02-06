@@ -61,7 +61,7 @@ cat > ~/.vim/template/py.tlp << EOF
 # conding=utf-8
 #
 EOF
-systemctl enable NetworkManager
+
 #时间同步阿里云时间服务器
 yum -y install chrony
 sed -i 's/0.centos.pool.ntp.org/ntp1.aliyun.com/' /etc/chrony.conf
