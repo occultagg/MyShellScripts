@@ -11,8 +11,10 @@ yum clean all
 yum makecache fast
 yum -y update
 # 安装常用工具和开发环境
-yum -y install net-tools telnet vim git lrzsz python-pip tcpdump
+yum -y install net-tools telnet vim git lrzsz tcpdump
 yum -y groupinstall 'development tools' 'server platform development'
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+python get-pip.py
 # 修改pip源
 cd /root/
 mkdir ./.pip
