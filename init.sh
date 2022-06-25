@@ -73,3 +73,6 @@ sed -i 's/2.centos.pool.ntp.org/ntp3.aliyun.com/' /etc/chrony.conf
 sed -i 's/3.centos.pool.ntp.org/ntp4.aliyun.com/' /etc/chrony.conf
 systemctl start chronyd
 systemctl enable chronyd
+
+#修改时区
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
